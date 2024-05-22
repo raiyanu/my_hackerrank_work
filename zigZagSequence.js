@@ -10,12 +10,17 @@ function processData(data) {
     console.log("first:" + firstHalfArray);
     console.log("second:" + secondHalfArray);
     for (let index = 0; index < secondHalfArray.length + 1; index++) {
-        permutatedArray.push(firstHalfArray.shift());
-        permutatedArray.push(firstHalfArray.shift());
-        permutatedArray.push(secondHalfArray.shift());
-        permutatedArray.push(secondHalfArray.shift());
+        if (index % 2 == 0) {
+            permutatedArray.push(firstHalfArray.shift());
+            permutatedArray.push(secondHalfArray.shift());
+            permutatedArray.push(secondHalfArray.shift());
+        } else {
+            permutatedArray.push(firstHalfArray.shift());
+            permutatedArray.push(firstHalfArray.shift());
+            permutatedArray.push(secondHalfArray.shift());
+        }
     }
-    // console.log(...permutatedArray);
+    console.log(...permutatedArray);
     return permutatedArray;
 }
 
