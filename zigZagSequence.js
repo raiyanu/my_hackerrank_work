@@ -5,7 +5,6 @@ function processData(data) {
     data.sort((a, b) => a - b);
     let firstHalfArray = data.slice(0, data.length / 2 % 2 == 0 ? data.length / 2 : data.length / 2 + 1);
     let secondHalfArray = data.slice(data.length / 2 % 2 == 0 ? data.length / 2 + 1 : data.length / 2 + 1, data.length);
-    secondHalfArray.reverse();
     let permutatedArray = [];
     console.log("first:" + firstHalfArray);
     console.log("second:" + secondHalfArray);
